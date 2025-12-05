@@ -1,6 +1,6 @@
-package service;
+package Main.service;
 
-import model.Tree;
+import Main.model.tree.Tree;
 
 import java.util.ArrayList;
 import java.util.List;

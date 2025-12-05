@@ -1,6 +1,6 @@
-package patterns;
+package Main.patterns.other;
 
-import model.Season;
+import Main.model.enums.Season;
 
 /**Патерн Observer: Інтерфейс для об'єктів, що реагують на зміну часу.**/
 public interface TimeObserver {

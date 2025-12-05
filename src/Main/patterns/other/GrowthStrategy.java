@@ -1,6 +1,6 @@
-package patterns;
+package Main.patterns.other;
 
-import model.Season;
+import Main.model.enums.Season;
 
 public interface GrowthStrategy {
     int calculateHealthChange(Season season);

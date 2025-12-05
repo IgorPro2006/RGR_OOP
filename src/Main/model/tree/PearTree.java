@@ -1,6 +1,8 @@
-package model;
+package Main.model.tree;
 
-import patterns.GrowthStrategy;
+import Main.model.otherObject.Fruit;
+import Main.model.enums.Season;
+import Main.patterns.other.GrowthStrategy;
 
 public class PearTree extends Tree {
 

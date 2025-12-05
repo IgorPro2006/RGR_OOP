@@ -1,4 +1,6 @@
-package model;
+package Main.model.otherObject;
+
+import Main.model.enums.FruitState;
 
 import java.util.Random;
 

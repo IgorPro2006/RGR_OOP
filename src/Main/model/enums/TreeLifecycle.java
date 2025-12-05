@@ -1,4 +1,4 @@
-package model;
+package Main.model.enums;
 
 public enum TreeLifecycle {
     SPROUT(0, 5, "Паросток"),

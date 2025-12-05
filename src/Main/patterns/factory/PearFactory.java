@@ -1,7 +1,7 @@
-package patterns;
+package Main.patterns.factory;
 
-import model.PearTree;
-import model.Tree;
+import Main.model.tree.PearTree;
+import Main.model.tree.Tree;
 
 public class PearFactory implements TreeFactory {
     @Override

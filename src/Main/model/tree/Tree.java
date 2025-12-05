@@ -1,19 +1,15 @@
-package model;
+package Main.model.tree;
 
-import patterns.GrowthStrategy;
-import patterns.TimeObserver;
+import Main.model.otherObject.Fruit;
+import Main.model.enums.Season;
+import Main.model.enums.TreeLifecycle;
+import Main.patterns.other.GrowthStrategy;
+import Main.patterns.other.TimeObserver;
 
 
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Random;
-
-
-
-
-
-
-
 
 public abstract class Tree implements TimeObserver {
     protected int id;
@@ -84,7 +80,7 @@ public abstract class Tree implements TimeObserver {
     public TreeLifecycle getLifecycle() { return lifecycle; }
     public List<Fruit> getFruits() { return fruits; }
 
-    // --- Inner Builder Class ---
+    //Inner Builder Class
     public static abstract class TreeBuilder<T extends TreeBuilder<T>> {
         int age = 0;
         int health = 100;

@@ -1,8 +1,8 @@
-package patterns;
+package Main.patterns.factory;
 
 
-import model.AppleTree;
-import model.Tree;
+import Main.model.tree.AppleTree;
+import Main.model.tree.Tree;
 
 public class AppleFactory implements TreeFactory {
     @Override

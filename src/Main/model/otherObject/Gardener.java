@@ -1,9 +1,12 @@
-package model;
+package Main.model.otherObject;
 
 
-import patterns.TreeFactory;
-import service.Garden;
-import service.TimeManager;
+import Main.model.enums.FruitState;
+import Main.model.enums.TreeLifecycle;
+import Main.model.tree.Tree;
+import Main.patterns.factory.TreeFactory;
+import Main.service.Garden;
+import Main.service.TimeManager;
 
 import java.util.Iterator;
 
@@ -72,9 +75,7 @@ public class Gardener {
             return;
         }
 
-        // Шукаємо хоча б один стиглий фрукт
         for (Tree tree : garden.getTrees()) {
-            // Пропускаємо мертві дерева або ті, що не мають фруктів
             if (tree.getLifecycle() == TreeLifecycle.DEAD || tree.getFruits().isEmpty()) {
                 continue;
             }
@@ -105,7 +106,7 @@ public class Gardener {
                 Fruit fruit = fruitIterator.next();
                 if (fruit.getState() == FruitState.RIPE) {
                     collectedNow++;
-                    fruitIterator.remove(); // Зриваємо фрукт
+                    fruitIterator.remove();
                 }
             }
         }
@@ -114,7 +115,7 @@ public class Gardener {
         energy -= 25;
         System.out.println("Садівник зібрав " + collectedNow + " фруктів.");
 
-        // Бонус: обмін фруктів на добрива
+        //обмін фруктів на добрива
         if (collectedNow >= 5) {
             garden.addFertilizer(1);
             System.out.println("Бонус: Отримано мішок добрив за гарний врожай!");

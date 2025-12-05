@@ -1,7 +1,7 @@
-package service;
+package Main.service;
 
-import model.Season;
-import patterns.TimeObserver;
+import Main.model.enums.Season;
+import Main.patterns.other.TimeObserver;
 
 import java.util.ArrayList;
 import java.util.List;

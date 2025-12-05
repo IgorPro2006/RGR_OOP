@@ -1,6 +1,6 @@
-package patterns;
+package Main.patterns.factory;
 
-import model.Tree;
+import Main.model.tree.Tree;
 
 /**Патерн Abstract Factory / Factory Method.**/
 public interface TreeFactory {

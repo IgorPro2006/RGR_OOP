@@ -1,29 +1,25 @@
+package Main.Run;
 
-import model.Tree;
-import model.Gardener;
-import patterns.AppleFactory;
-import patterns.PearFactory;
-import patterns.TreeFactory;
-import service.*;
+import Main.model.tree.Tree;
+import Main.model.otherObject.Gardener;
+import Main.patterns.factory.AppleFactory;
+import Main.patterns.factory.PearFactory;
+import Main.patterns.factory.TreeFactory;
+import Main.service.Garden;
+import Main.service.TimeManager;
 
-import tests.TestRunner;
 
 import java.util.Scanner;
 
 
-public class Main {
+public class Run {
     public static void main(String[] args) {
-        // 1. Спочатку запускаємо тести
-        TestRunner tests = new TestRunner();
-        tests.runAllTests();
-
         System.out.println("\n-------------------------------------------");
         System.out.println("Запуск симуляції...");
         System.out.println("-------------------------------------------\n");
 
-        // 2. Ініціалізація
+
         Garden garden = Garden.getInstance();
-        garden.clear(); // Очистка після тестів
 
         TimeManager timeManager = new TimeManager();
         Gardener gardener = new Gardener();
@@ -33,7 +29,6 @@ public class Main {
 
         System.out.println("Вітаємо у Саду! Введіть 'help' для списку команд.");
 
-        // 3. Main Loop
         while (running) {
             // Відображення статусу
             printHUD(gardener, timeManager, garden);
