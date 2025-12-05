@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 /**Пори року для симуляції**/
 public enum Season {
